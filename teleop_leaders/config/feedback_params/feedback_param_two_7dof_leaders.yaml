@@ -1,0 +1,29 @@
+joints:
+  - 'robot1/joint1'
+  - 'robot1/joint2'
+  - 'robot1/joint3'
+  - 'robot1/joint4'
+  - 'robot1/joint5'
+  - 'robot1/joint6'
+  - 'robot1/joint7'
+  - 'robot1/gripper'
+  - 'robot2/joint1'
+  - 'robot2/joint2'
+  - 'robot2/joint3'
+  - 'robot2/joint4'
+  - 'robot2/joint5'
+  - 'robot2/joint6'
+  - 'robot2/joint7'
+  - 'robot2/gripper'
+# gripper_joint: 'robot1/rh_r1_joint'
+limb_names:
+  - 'robot1'
+  - 'robot2' 
+eef_links:
+  - 'robot1/end_effector_link'
+  - 'robot2/end_effector_link'
+max_effort: 1.0
+init_pose: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Kp_follower_feedback: [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.3,0.1,0.1,0.1,0.1,0.1,0.1,0.3]
+Kp_nullspace_feedback: [0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+Kp_base_pose_feedback: [0.02,0.015,0.02,0.02,0.02,0.02,0.05,0.02,0.015,0.02,0.02,0.02,0.02,0.05]

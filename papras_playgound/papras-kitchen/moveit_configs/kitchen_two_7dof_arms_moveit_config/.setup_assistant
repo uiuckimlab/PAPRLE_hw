@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: papras_kitchen
+    relative_path: urdf/papras_kitchen_2_7dof_arms.urdf.xacro
+  srdf:
+    relative_path: config/kitchen.srdf
+  package_settings:
+    author_name: obin kwon
+    author_email: obinkwon@illinois.edu
+    generated_timestamp: 1745094757

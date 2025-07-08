@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="kitchen" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Import PAPRAS Macros -->
+  <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+  <xacro:include filename="$(find papras_description)/urdf/papras_ros2_control.xacro"/>
+
+  <xacro:property name="systems" value="${['papras_7dof', 'gripper', 'papras_7dof', 'gripper']}"/>
+  <xacro:property name="system_prefix" value="${['robot1', 'robot1', 'robot2', 'robot2']}"/>
+  <xacro:property name="arm_ids" value="${[1, 1, 2, 2]}"/>
+  <xacro:arg name="usb_port" default="/dev/ttyUSB0"/>
+  <xacro:arg name="baud_rate" default="1000000"/>
+  <xacro:property name="yaml_file" value="$(find papras_kitchen)/config/hardware_dual_7dof.yaml"/>
+  
+  <link name="world"/>
+
+  <joint name="world_env_fixed" type="fixed">
+    <parent link="world"/>
+    <child link="env"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="env">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find papras_kitchen)/meshes/kitchen.stl"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find papras_kitchen)/meshes/kitchen_simple.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="env">
+      <material>Gazebo/DarkGrey</material>
+    </gazebo>
+  <joint name="robot1/env_arm_fixed" type="fixed">
+    <parent link="env"/>
+    <child link="robot1/link1"/>
+    <origin xyz="-0.07 0.01597 0.85252" rpy="0 ${0.5*pi} 0"/>
+  </joint>
+
+  <joint name="robot2/env_arm_fixed" type="fixed">
+    <parent link="env"/>
+    <child link="robot2/link1"/>
+    <origin xyz="-0.245 0.01597 0.85252" rpy="0 0 ${pi}"/>
+  </joint>
+
+  <!--<joint name="robot2/env_arm_fixed" type="fixed">
+    <parent link="robot1/link1"/>
+    <child link="robot2/link1"/>
+    <origin xyz="0.011609458152030983 -0.000667326490530689 -0.17543698102577485" rpy="-0.14789302807527918 1.5515680256609303 -0.1462730726657806"/>
+  </joint>-->
+
+
+
+
+  <xacro:papras_arm_7dof id="1"/>
+  <xacro:papras_finray_gripper id="1"/>
+  <xacro:papras_camera_D435i id="1" x="-0.07711643" y="0.03155337" z="0.06748414" xrot="-1.5513468235632117" yrot="-0.02071981402276165" zrot="-1.5665139152978"/>
+
+  <xacro:papras_arm_7dof id="2"/>
+  <xacro:papras_finray_gripper id="2"/>
+  <xacro:papras_camera_D435i id="2" x="-0.07711643" y="0.03155337" z="0.06748414" xrot="-1.5513468235632117" yrot="-0.02071981402276165" zrot="-1.5665139152978"/>
+  
+  <xacro:papras_ros2_control_hw systems="${systems}" system_prefix="${system_prefix}" arm_ids= "${arm_ids}" usb_port_location='${usb_port}' baud_rate_val="${baud_rate}" yaml_file="${yaml_file}"/>
+  
+
+
+</robot>

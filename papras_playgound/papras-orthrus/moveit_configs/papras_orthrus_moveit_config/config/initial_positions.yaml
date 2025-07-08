@@ -1,0 +1,19 @@
+# Default initial positions for papras_7dof_spot_move_teleop's ros2_control fake system
+
+initial_positions:
+  robot3/gripper: 0
+  robot3/joint1: 0
+  robot3/joint2: 0
+  robot3/joint3: 0
+  robot3/joint4: 0
+  robot3/joint5: 0
+  robot3/joint6: 0
+  robot3/joint7: 0
+  robot4/gripper: 0
+  robot4/joint1: 0
+  robot4/joint2: 0
+  robot4/joint3: 0
+  robot4/joint4: 0
+  robot4/joint5: 0
+  robot4/joint6: 0
+  robot4/joint7: 0

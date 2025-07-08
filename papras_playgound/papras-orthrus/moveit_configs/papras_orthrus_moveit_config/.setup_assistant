@@ -1,0 +1,27 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: papras_orthrus
+    relative_path: description/urdf/spot_7dof_teleop.urdf.xacro
+  srdf:
+    relative_path: config/papras_7dof_spot_move_teleop.srdf
+  package_settings:
+    author_name: obin kwon
+    author_email: obinkwon@illinois.edu
+    generated_timestamp: 1748384588
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+      - effort
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+      - effort

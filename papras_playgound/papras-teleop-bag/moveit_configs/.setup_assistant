@@ -1,0 +1,27 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: papras_teleop_bag
+    relative_path: description/urdf/dual_7dof_metal_arm_hw.xacro
+  srdf:
+    relative_path: config/teleop_table.srdf
+  package_settings:
+    author_name: obin kwon
+    author_email: obinkwon@illinois.edu
+    generated_timestamp: 1748918259
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+      - effort
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+      - effort

@@ -1,0 +1,3 @@
+[submodule "papras_playgound/papras-orthrus/spot_description"]
+	path = papras_playgound/papras-orthrus/spot_description
+	url = https://github.com/bdaiinstitute/spot_description

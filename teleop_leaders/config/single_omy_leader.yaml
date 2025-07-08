@@ -1,0 +1,49 @@
+joint1:
+  ID: 1
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 0
+  Operating_Mode: 0
+  Torque_Enable: 1
+joint2:
+  ID: 2
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 1
+  Operating_Mode: 0
+  Torque_Enable: 1
+joint3:
+  ID: 3
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 0
+  Operating_Mode: 0
+  Torque_Enable: 1
+joint4:
+  ID: 4
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 1
+  Operating_Mode: 0
+  Torque_Enable: 1
+joint5:
+  ID: 5
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 0
+  Operating_Mode: 0
+  Torque_Enable: 1
+joint6:
+  ID: 6
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 1
+  Operating_Mode: 0
+  Torque_Enable: 1
+gripper:
+  ID: 7
+  Return_Delay_Time: 0
+  Homing_Offset: 0
+  Drive_Mode: 0
+  Operating_Mode: 0
+  Torque_Enable: 1

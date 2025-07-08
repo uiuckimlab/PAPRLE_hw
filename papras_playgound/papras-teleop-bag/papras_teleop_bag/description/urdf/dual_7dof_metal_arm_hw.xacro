@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<robot name="teleop_table" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+ <!-- Import PAPRAS Macros -->
+ <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+ <xacro:include filename="$(find papras_description)/urdf/papras_ros2_control.xacro"/>
+ <link name="world"/>
+  <joint name="world_env_fixed" type="fixed">
+    <parent link="world"/>
+    <child link="env"/>
+    <origin rpy="1.57 0 0.0" xyz="0 0 0.13"/>
+  </joint>
+
+  <link name="env">
+    <inertial>
+      <origin xyz="-0.00217818989969598 0.0115130557907703 4.82152969644036E-05" rpy="0 0 0" />
+      <mass value="24.3199996241188" />
+      <inertia ixx="2.59730961995013" ixy="1.29430820761003E-05" ixz="9.65770339797831E-10" iyy="3.22235223758385" iyz="-6.72646520780374E-05" izz="0.632617930010872" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find papras_teleop_bag)/description/meshes/Suitcase_Assem.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find papras_teleop_bag)/description/meshes/Suitcase_Assem.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="env">
+    <static>true</static>
+  </gazebo>
+
+
+  <joint name="robot3/env_joint" type="fixed">
+    <origin xyz="0.2625 -0.0962 -0.67540" rpy="-1.57 -1.57 0" />
+    <parent link="env" />
+    <child link="robot3/link1" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <joint name="robot4/env_joint" type="fixed">
+    <origin xyz="-0.2625 -0.0962 -0.67540" rpy="-1.57 -1.57 0" />
+    <parent link="env" />
+    <child link="robot4/link1" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <xacro:papras_arm_7dof_metal id="3"/>
+  <xacro:rh_p12_rn_gripper id="3"/>
+  <xacro:papras_camera_rh12 id="3"/> 
+
+  <xacro:papras_arm_7dof_metal id="4"/>
+  <xacro:rh_p12_rn_gripper id="4"/>
+  <xacro:papras_camera_rh12 id="4"/>
+  
+  <xacro:property name="systems" value="${['papras_7dof', 'papras_7dof', 'gripper', 'gripper']}"/>
+  <xacro:property name="system_prefix" value="${['robot3', 'robot4', 'robot3', 'robot4']}"/>
+  <xacro:property name="arm_ids" value="${[3,4,3,4]}"/>
+  <xacro:property name="controller_params" value="$(find papras_controls)/config/joint_trajectory_controller_7dof.yaml"/>
+  <xacro:property name="usb_port" value="/dev/ttyUSB0"/>
+  <xacro:property name="baud_rate" value="1000000"/>
+  <xacro:property name="yaml_file" value="$(find papras_teleop_bag)/config/two_7dof_papras.yaml"/>
+
+  <xacro:papras_ros2_control_hw systems="${systems}" system_prefix="${system_prefix}" arm_ids= "${arm_ids}" usb_port_location='${usb_port}' baud_rate_val="${baud_rate}" yaml_file="${yaml_file}"/>
+
+</robot>

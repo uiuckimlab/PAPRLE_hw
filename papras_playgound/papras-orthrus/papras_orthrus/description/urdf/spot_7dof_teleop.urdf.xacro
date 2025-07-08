@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<robot name="papras_7dof_spot_move_teleop" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- left arm prefix is robot3/ -->
+  <!-- right arm prefix is robot4/ -->
+
+  <!-- Import PAPRAS Macros -->
+  <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+  <xacro:include filename="$(find spot_description)/urdf/spot_macro.xacro"/>
+
+  <mujoco>
+    <compiler meshdir="../assets/" balanceinertia="true" discardvisual="false"/>
+  </mujoco>
+  <!-- <link name="world"/> -->
+
+  <!-- spot body -->
+  <xacro:load_spot tf_prefix=""/>
+
+
+  <joint name="mount_fixed" type="fixed">
+    <parent link="front_rail"/>
+    <child link="env"/>
+    <origin xyz="0.09 0 0" rpy="0 0 0"/>
+  </joint>
+   <link name="env">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find papras_orthrus)/description/meshes/spot_mount.stl"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="file://$(find papras_orthrus)/description/meshes/spot_mount.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="body">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  <gazebo reference="env">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  <gazebo reference="front_left_lower_leg">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  <gazebo reference="front_left_upper_leg">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  <gazebo reference="front_right_lower_leg">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  <gazebo reference="front_right_upper_leg">
+    <self_collide>false</self_collide>
+    <kinematic>true</kinematic>
+  </gazebo>
+  
+  <joint name="robot3/env_arm_fixed" type="fixed">
+    <parent link="env"/>
+    <child link="robot3/link1"/>
+    <origin xyz="0.0 0.05049 0.09003" rpy="0 ${-pi*0.25} ${pi*0.5 + pi}"/>
+  </joint>
+  <joint name="robot4/env_arm_fixed" type="fixed">
+    <parent link="env"/>
+    <child link="robot4/link1"/>
+    <origin xyz="0.0 -0.05049 0.09003" rpy="0 ${-pi*0.25} ${-pi*0.5 + pi}"/>
+  </joint>
+
+  <!-- papras arm -->
+  <xacro:papras_arm_7dof id="3"/>
+  <xacro:rh_p12_rn_gripper id="3"/>
+  <xacro:papras_camera_far_eye_rh12 id="3"/>
+  
+  <xacro:papras_arm_7dof id="4"/>
+  <xacro:rh_p12_rn_gripper id="4"/>
+  <xacro:papras_camera_far_eye_rh12 id="4"/>
+
+</robot>

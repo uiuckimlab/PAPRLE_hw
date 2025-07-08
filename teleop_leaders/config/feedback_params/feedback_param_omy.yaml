@@ -1,0 +1,19 @@
+joints:
+  - 'joint1'
+  - 'joint2'
+  - 'joint3'
+  - 'joint4'
+  - 'joint5'
+  - 'joint6'
+  - 'gripper'
+# gripper_joint: 'robot1/rh_r1_joint'
+limb_names:
+  - 'robot'
+eef_links:
+  - 'end_effector_link'
+gripper_homing_position: 0.0
+max_effort: 1.0
+init_pose: [0.0, -1.0, 1.945, -0.4, 1.571, -0.12, 0.0] 
+Kp_follower_feedback: [0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+Kp_nullspace_feedback: [0.1,0.1,0.1,0.1,0.1,0.1,0.1]
+Kp_base_pose_feedback: [0.04,0.04,0.03,0.03,0.03,0.03,0.03]

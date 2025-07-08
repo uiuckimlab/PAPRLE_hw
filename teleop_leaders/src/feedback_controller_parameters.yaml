@@ -1,0 +1,27 @@
+feedback_controller:
+  robot_description: {
+    type: string,
+    default_value: "robot_description",
+    description: "Name of the robot description parameter in the parameter server"
+  }
+  joints: {
+    type: string_array,
+    default_value: ['robot1/joint1', 'robot1/joint2', 'robot1/joint3', 'robot1/joint4', 'robot1/joint5', 'robot1/joint6','robot1/joint7'],
+    description: "Joint names to control and listen to",
+    read_only: true,
+    validation: {
+      unique<>: null,
+    }
+  }
+  command_interfaces: {
+    type: string_array,
+    default_value: [],
+    description: "Command interfaces provided by the hardware interface for all joints",
+    read_only: true,
+  }
+  state_interfaces: {
+    type: string_array,
+    default_value: [],
+    description: "State interfaces provided by the hardware for all joints.",
+    read_only: true,
+  }

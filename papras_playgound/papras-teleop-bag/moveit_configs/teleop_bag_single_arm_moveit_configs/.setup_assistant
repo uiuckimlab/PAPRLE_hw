@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: papras_teleop_bag
+    relative_path: description/urdf/single_7dof_metal_arm_hw.xacro
+  srdf:
+    relative_path: config/teleop_table.srdf
+  package_settings:
+    author_name: obin kwon
+    author_email: obinkwon@illinois.edu
+    generated_timestamp: 1748979727
