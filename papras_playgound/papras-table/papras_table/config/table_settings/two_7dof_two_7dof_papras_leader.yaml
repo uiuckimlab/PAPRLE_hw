@@ -1,0 +1,48 @@
+controller:
+  max_arm_queue: 10
+  max_hand_queue: 10
+  hand_control_dt: 0.008
+  arm_control_dt: 0.008
+
+
+followers:
+  - side: "right"
+    dof: 7
+    robot_name: "robot3"
+    arm_name: "arm3"
+    with_gripper: true
+    start_moveit: true
+    control:
+      control_mode: "joint_traj" # can be position, or joint_traj
+      control_freq: 125.0
+      teleop_freq: 50.0
+      arm_state_topic: "/followers/joint_states"
+
+  - side: "left"
+    dof: 7
+    robot_name: "robot4"
+    arm_name: "arm4"
+    with_gripper: true
+    start_moveit: true
+    control:
+      control_mode: "joint_traj" # can be position, or joint_traj
+      control_freq: 125.0
+      teleop_freq: 50.0
+      arm_state_topic: "/followers/joint_states"
+
+leaders:
+  - side: "right"
+    dof: 7
+    type: "PAPRAS"
+    robot_name: "robot1"
+    arm_name: "arm1"
+    with_gripper: true 
+    joint_state_topic: "/leaders/joint_states"
+    
+  - side: "left"
+    dof: 7
+    type: "PAPRAS"
+    robot_name: "robot2"
+    arm_name: "arm2"
+    with_gripper: true
+    joint_state_topic: "/leaders/joint_states"

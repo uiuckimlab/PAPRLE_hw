@@ -1,0 +1,371 @@
+{'chubby-liger-p3ExJ+Qwox9OJs9oFIOCeQ==': id: "chubby-liger-p3ExJ+Qwox9OJs9oFIOCeQ=="
+snapshot_id: "snapshot_canny-jackal-AvP7NHWKH.T1MYqk3.wpNg=="
+waypoint_tform_ko {
+  position {
+    x: -3.146613750757675
+    y: 7.82484069374766
+    z: -0.04392363423902904
+  }
+  rotation {
+    x: 0.005049232393503189
+    y: -0.004899799823760986
+    z: -0.9645416140556335
+    w: 0.26383692026138306
+  }
+}
+annotations {
+  name: "waypoint_11"
+  creation_time {
+    seconds: 1657048680
+    nanos: 378768939
+  }
+}
+, 'coral-antler-6vVR.FQml8z7FN2QZ+vQvg==': id: "coral-antler-6vVR.FQml8z7FN2QZ+vQvg=="
+snapshot_id: "snapshot_joking-sponge-2DEo5W.btqMP7Tln.S+2TA=="
+waypoint_tform_ko {
+  position {
+    x: -0.19894262420085648
+    y: 0.031038640793468422
+    z: -0.01825416766343599
+  }
+  rotation {
+    x: 0.003672219580039382
+    y: -0.008168276399374008
+    z: -0.5463876128196716
+    w: 0.8374845385551453
+  }
+}
+annotations {
+  name: "waypoint_0"
+  creation_time {
+    seconds: 1657048526
+    nanos: 726133278
+  }
+}
+, 'cracked-lizard-SUX+PXBXqp2P+xgwjvbquA==': id: "cracked-lizard-SUX+PXBXqp2P+xgwjvbquA=="
+snapshot_id: "snapshot_sassy-goose-07Fu9LPZlCMqkvYEkNi3Bg=="
+waypoint_tform_ko {
+  position {
+    x: -4.83311783321754
+    y: 7.257224605747243
+    z: -0.15025321731550517
+  }
+  rotation {
+    x: 0.004263079259544611
+    y: -0.012734095565974712
+    z: -0.9420167803764343
+    w: 0.33529701828956604
+  }
+}
+annotations {
+  name: "waypoint_9"
+  icp_variance {
+    yaw_variance: 5.128380962560186e-06
+    cov_xx: 2.8031518013449386e-06
+    cov_xy: -1.5708933460700791e-06
+    cov_xz: -1.199507664750854e-06
+    cov_yx: -1.5708933460700791e-06
+    cov_yy: 4.469389295991277e-06
+    cov_yz: -2.3976490410859697e-06
+    cov_zx: -1.199507664750854e-06
+    cov_zy: -2.3976490410859697e-06
+    cov_zz: 6.17372324995813e-06
+  }
+  creation_time {
+    seconds: 1657048631
+    nanos: 912175230
+  }
+}
+, 'cuddly-yak-FXWWQG7+SRtDh5RXiueibg==': id: "cuddly-yak-FXWWQG7+SRtDh5RXiueibg=="
+snapshot_id: "snapshot_west-shrimp-xXw9J5LkLaP6yj.6ix4CSg=="
+waypoint_tform_ko {
+  position {
+    x: -0.29720886092204624
+    y: 0.2806186853819085
+    z: -0.025335211255972278
+  }
+  rotation {
+    x: 0.005582609213888645
+    y: 0.00454416498541832
+    z: -0.9615141153335571
+    w: 0.2746610939502716
+  }
+}
+annotations {
+  name: "waypoint_1"
+  icp_variance {
+    yaw_variance: 4.520028795695907e-08
+    cov_xx: 8.251778126577847e-06
+    cov_xy: -2.5775530048122164e-06
+    cov_xz: 7.005351562838769e-06
+    cov_yx: -2.5775530048122164e-06
+    cov_yy: 3.935172571800649e-06
+    cov_yz: -5.116057195664325e-07
+    cov_zx: 7.005351562838769e-06
+    cov_zy: -5.116057195664325e-07
+    cov_zz: 6.84527367411647e-06
+  }
+  creation_time {
+    seconds: 1657048559
+    nanos: 117695654
+  }
+}
+, 'dreary-seal-zoV1PATgKKdJ9AaBXSB+dQ==': id: "dreary-seal-zoV1PATgKKdJ9AaBXSB+dQ=="
+snapshot_id: "snapshot_damp-dove-7QaDC620KQQ8TMqLfwzD2g=="
+waypoint_tform_ko {
+  position {
+    x: -0.35869451705137567
+    y: -0.15000710864928232
+    z: -0.04391971143035187
+  }
+  rotation {
+    x: 0.0019311484647914767
+    y: -0.007429254706948996
+    z: -0.5129840970039368
+    w: 0.8583638072013855
+  }
+}
+annotations {
+  name: "waypoint_4"
+  icp_variance {
+    yaw_variance: 3.082032344536856e-05
+    cov_xx: 1.1976116184087005e-05
+    cov_xy: 4.157561488682404e-05
+    cov_xz: -9.475176739215385e-06
+    cov_yx: 4.157561488682404e-05
+    cov_yy: 0.00014433159958571196
+    cov_yz: -3.2893494790187106e-05
+    cov_zx: -9.475176739215385e-06
+    cov_zy: -3.2893494790187106e-05
+    cov_zz: 7.496501439163694e-06
+  }
+  creation_time {
+    seconds: 1657048611
+    nanos: 474376130
+  }
+}
+, 'over-mule-9n8knC5iFISss1Zhsrx7vg==': id: "over-mule-9n8knC5iFISss1Zhsrx7vg=="
+snapshot_id: "snapshot_jade-adder-+ywcQtyCJu0wUHAnlyL4tw=="
+waypoint_tform_ko {
+  position {
+    x: -8.383224264689877
+    y: 1.0719421789975532
+    z: -0.03305555416251902
+  }
+  rotation {
+    x: 0.004391223657876253
+    y: -0.006680653430521488
+    z: -0.7110502123832703
+    w: 0.7030957341194153
+  }
+}
+annotations {
+  name: "waypoint_8"
+  icp_variance {
+    yaw_variance: 1.5017525356597616e-06
+    cov_xx: 6.934583507245407e-05
+    cov_xy: 1.1747014468710404e-05
+    cov_xz: -3.227720662835054e-05
+    cov_yx: 1.1747014468710404e-05
+    cov_yy: 1.7251682947971858e-05
+    cov_yz: 2.4423709419352235e-06
+    cov_zx: -3.227720662835054e-05
+    cov_zy: 2.4423709419352235e-06
+    cov_zz: 4.940445433021523e-05
+  }
+  creation_time {
+    seconds: 1657048623
+    nanos: 623886364
+  }
+}
+, 'presto-cod-0Hhg1P6Iox8bPfQx2Fc3SA==': id: "presto-cod-0Hhg1P6Iox8bPfQx2Fc3SA=="
+snapshot_id: "snapshot_licked-mite-w+aEGRXmGlsPyzNij9Estw=="
+waypoint_tform_ko {
+  position {
+    x: -0.8233733717982258
+    y: 0.0628258283690965
+    z: -0.03489215648603127
+  }
+  rotation {
+    x: 0.010228035971522331
+    y: -0.007803726010024548
+    z: -0.961255669593811
+    w: 0.2753579914569855
+  }
+}
+annotations {
+  name: "default"
+  creation_time {
+    seconds: 1657048591
+    nanos: 500097798
+  }
+}
+, 'ritzy-iguana-j7cpo4v1mYtgVwbhAAUyWQ==': id: "ritzy-iguana-j7cpo4v1mYtgVwbhAAUyWQ=="
+snapshot_id: "snapshot_toxic-porgy-rr+UITDoE773tLwexEkK.A=="
+waypoint_tform_ko {
+  position {
+    x: -4.291631718697594
+    y: 7.850877798590902
+    z: -0.020292237495996897
+  }
+  rotation {
+    x: 0.0072101629339158535
+    y: -0.004232954233884811
+    z: -0.9594556093215942
+    w: 0.28173574805259705
+  }
+}
+annotations {
+  name: "waypoint_10"
+  creation_time {
+    seconds: 1657048670
+    nanos: 190590611
+  }
+}
+, 'sacked-sow-Oij+1f.+EtzwoNsf1pJOYg==': id: "sacked-sow-Oij+1f.+EtzwoNsf1pJOYg=="
+snapshot_id: "snapshot_rushy-doe-GgpSs3PCr6h1EEJ9nZECHg=="
+waypoint_tform_ko {
+  position {
+    x: -6.390302628083518
+    y: 0.8712716061700619
+    z: -0.06748828260212467
+  }
+  rotation {
+    x: 0.0028481108602136374
+    y: -0.009864790365099907
+    z: -0.7109466195106506
+    w: 0.7031710147857666
+  }
+}
+annotations {
+  name: "waypoint_7"
+  icp_variance {
+    yaw_variance: 2.367308843531646e-05
+    cov_xx: 0.0003071031242143363
+    cov_xy: -6.73596077831462e-05
+    cov_xz: -3.33465650328435e-05
+    cov_yx: -6.73596077831462e-05
+    cov_yy: 0.0001944204414030537
+    cov_yz: 4.216180241201073e-05
+    cov_zx: -3.33465650328435e-05
+    cov_zy: 4.216180241201073e-05
+    cov_zz: 1.1952540262427647e-05
+  }
+  creation_time {
+    seconds: 1657048618
+    nanos: 902784921
+  }
+}
+, 'scaley-dove-B.MEGulg29yQTRkFuVx0.A==': id: "scaley-dove-B.MEGulg29yQTRkFuVx0.A=="
+snapshot_id: "snapshot_gabled-mayfly-NbbaDfulWULEmJT3sSGBsw=="
+waypoint_tform_ko {
+  position {
+    x: -2.4203092028741726
+    y: 0.31839542547416916
+    z: -0.05752703320067854
+  }
+  rotation {
+    x: 0.014168585650622845
+    y: -0.002138701733201742
+    z: -0.644090473651886
+    w: 0.7648151516914368
+  }
+}
+annotations {
+  name: "waypoint_5"
+  icp_variance {
+    yaw_variance: 2.576337465143297e-05
+    cov_xx: 0.00028375914553180337
+    cov_xy: -3.179355917382054e-05
+    cov_xz: -1.51130609538086e-06
+    cov_yx: -3.179355917382054e-05
+    cov_yy: 0.00012820166011806577
+    cov_yz: -3.232927338103764e-05
+    cov_zx: -1.51130609538086e-06
+    cov_zy: -3.232927338103764e-05
+    cov_zz: 4.894133235211484e-05
+  }
+  creation_time {
+    seconds: 1657048614
+    nanos: 376587565
+  }
+}
+, 'spiffy-antler-q62LEfK6RPW3lYjAecUghQ==': id: "spiffy-antler-q62LEfK6RPW3lYjAecUghQ=="
+snapshot_id: "snapshot_tilted-cougar-tAQL6cnCqk+h3jzZuJKmfg=="
+waypoint_tform_ko {
+  position {
+    x: -4.341339760635219
+    y: 0.9105319338441319
+    z: -0.03751710166758787
+  }
+  rotation {
+    x: 0.017304180189967155
+    y: 0.003979905042797327
+    z: -0.709995448589325
+    w: 0.7039823532104492
+  }
+}
+annotations {
+  name: "waypoint_6"
+  icp_variance {
+    yaw_variance: 9.249261893273797e-06
+    cov_xx: 0.0010545181576162577
+    cov_xy: -0.000264022994088009
+    cov_xz: -6.912944809300825e-05
+    cov_yx: -0.000264022994088009
+    cov_yy: 0.00011002788232872263
+    cov_yz: 6.856585969217122e-05
+    cov_zx: -6.912944809300825e-05
+    cov_zy: 6.856585969217122e-05
+    cov_zz: 0.00014013129111845046
+  }
+  creation_time {
+    seconds: 1657048616
+    nanos: 699989839
+  }
+}
+, 'tasty-ram-KBbuiYKkzuh0BMF1eeTVug==': id: "tasty-ram-KBbuiYKkzuh0BMF1eeTVug=="
+snapshot_id: "snapshot_camp-bowfin-xh.l.HEKdHmq4yTIvehnkw=="
+waypoint_tform_ko {
+  position {
+    x: -0.08434935472506645
+    y: -0.04495897515489726
+    z: -0.0420849090124808
+  }
+  rotation {
+    x: 0.017636794596910477
+    y: -0.015143760479986668
+    z: -0.8560049533843994
+    w: 0.5164448618888855
+  }
+}
+annotations {
+  name: "waypoint_3"
+  creation_time {
+    seconds: 1657048608
+    nanos: 754312369
+  }
+}
+, 'tiny-filly-qFwhe3bsqY9nX30bsQOvqQ==': id: "tiny-filly-qFwhe3bsqY9nX30bsQOvqQ=="
+snapshot_id: "snapshot_molten-rhesus-jR7KSBIZPpg263im0RRBZw=="
+waypoint_tform_ko {
+  position {
+    x: -4.095426897260998
+    y: 7.851465872850703
+    z: -0.03287475082245678
+  }
+  rotation {
+    x: 0.00710128853097558
+    y: -0.0035824815277010202
+    z: -0.9623313546180725
+    w: 0.27176302671432495
+  }
+}
+annotations {
+  name: "default"
+  creation_time {
+    seconds: 1657048694
+    nanos: 483850022
+  }
+}
+}

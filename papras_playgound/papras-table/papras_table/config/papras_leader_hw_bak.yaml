@@ -1,0 +1,85 @@
+robot1/joint1:
+  ID: 1
+  Return_Delay_Time: 25
+  Homing_Offset: -1024
+
+robot1/joint2:
+  ID: 2
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot1/joint3:
+  ID: 3
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+
+robot1/joint4:
+  ID: 4
+  Return_Delay_Time: 25
+  Homing_Offset: -1024
+  # Homing_Offset: -125480
+
+robot1/joint5:
+  ID: 5
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot1/joint6:
+  ID: 6
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot1/joint7:
+  ID: 7
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot1/gripper:
+  ID: 111
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+
+robot2/joint1:
+  ID: 8
+  Return_Delay_Time: 25
+  Homing_Offset: -1024
+
+robot2/joint2:
+  ID: 9
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot2/joint3:
+  ID: 10
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+
+robot2/joint4:
+  ID: 11
+  Return_Delay_Time: 25
+  Homing_Offset: -1024
+  # Homing_Offset: -125480
+
+robot2/joint5:
+  ID: 12
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot2/joint6:
+  ID: 13
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot2/joint7:
+  ID: 14
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+
+robot2/gripper:
+  ID: 121
+  Return_Delay_Time: 25
+  Homing_Offset: 0
+

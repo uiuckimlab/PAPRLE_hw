@@ -1,0 +1,37 @@
+controller_list:
+  - name: arm3_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot3/joint1
+      - robot3/joint2
+      - robot3/joint3
+      - robot3/joint4
+      - robot3/joint5
+      - robot3/joint6
+      - robot3/joint7
+  - name: arm4_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot4/joint1
+      - robot4/joint2
+      - robot4/joint3
+      - robot4/joint4
+      - robot4/joint5
+      - robot4/joint6
+      - robot4/joint7
+  - name: gripper3_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot3/gripper
+  - name: gripper4_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - robot4/gripper

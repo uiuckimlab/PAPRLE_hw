@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="sim" default="false"/>
+  <arg name="pipeline" default="ompl"/>
+  <arg name="rviz" default="true"/>
+
+  <!-- Gazebo args -->
+  <arg name="paused" default="false"/>
+  <arg name="gazebo_gui" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="verbose" value="false" />
+  <arg name="source_list" default="[followers/joint_states]"/>
+  <arg name="rate" default="125"/>
+
+  <!-- Model spawn locations -->
+  <arg name="robot_pos_x" default="0"/>
+  <arg name="robot_pos_y" default="0"/>
+  <arg name="robot_pos_z" default="0.5"/>
+  <arg name="robot_pos_yaw" default="$(eval pi)"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find papras_description)/worlds/papras_system.world"/>
+    <arg name="gui" value="$(arg gazebo_gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
+  
+    <!-- startup robot_description related -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find papras_orthrus)/description/urdf/spot_7dof_teleop_sim.urdf.xacro'"/>
+
+    <!-- startup robot_description related -->
+  <group ns="followers"> 
+    <param name="robot_description" command="$(find xacro)/xacro '$(find papras_orthrus)/description/urdf/spot_7dof_teleop_sim.urdf.xacro'"/>
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+        <param name="tf_prefix" value="followers"/>
+    </node>
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model papras -x $(arg robot_pos_x) -y $(arg robot_pos_y) -z $(arg robot_pos_z) -Y $(arg robot_pos_yaw) -param robot_description"/>
+
+    <!-- startup ROS control related -->
+    <include file="$(find papras_controls)/launch/controller_utils.launch"/>
+    <rosparam file="$(find papras_controls)/config/joint_trajectory_controller_7dof_gazebo.yaml" command="load"/>
+    <rosparam file="$(find spot_config)/config/ros_control/ros_control.yaml" command="load"/>
+
+    <node name="arm34_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn arm3_controller arm4_controller gripper3_controller gripper4_controller"/>
+    <node name="spot_controller" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" 
+        args="spawn joint_group_position_controller "/>
+    <include file="$(find papras_7dof_moving_base_teleop)/launch/move_group.launch">
+      <arg name="pipeline" value="$(arg pipeline)"/>
+      <arg name="load_robot_description" value="false" />
+      <remap from="/joint_states" to="/followers/joint_states" />
+    </include>
+  </group>
+
+   <include file="$(find papras_orthrus)/launch/spot_move_sim.launch">
+     <arg name="joint_controller_topic" value="/followers/joint_group_position_controller/command" />
+     <arg name="joint_state_topic" value="/followers/joint_states" />
+   </include>
+
+  <!-- startup rviz visulization -->
+  <group if="$(arg rviz)">
+    <include file="$(find papras_7dof_moving_base_teleop)/launch/moveit_rviz.launch">
+      <arg name="rviz_config" value="$(find papras_7dof_moving_base_teleop)/launch/moveit.rviz"/>
+    </include>
+  </group>
+
+</launch>

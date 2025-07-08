@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot name="papras_leaders" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- Import PAPRAS Macros -->
+  <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+  <xacro:include filename="$(find teleop_leaders)/description/urdf/leader_macros.xacro"/>
+  <xacro:include filename="$(find teleop_leaders)/description/urdf/leader_macros.ros2_control.xacro"/>
+  
+  <link name="world"/>
+
+  <joint name="robot1/world_joint" type="fixed">
+    <origin xyz="0.2599 0.33455 -0.05189" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="robot1/base_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <joint name="robot1/end_effector_joint" type="fixed">
+    <parent link="robot1/handle"/>
+    <child link="robot1/end_effector_link"/>
+    <origin rpy="1.57 -1.57 0.0" xyz="0.0 0.0 0.0" />
+  </joint>
+  <link name="robot1/end_effector_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <box size="0.01 0.01 0.01"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+    <!-- <collision>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+        <geometry>
+          <box size = "0.01 0.01 0.01"/>
+        </geometry>
+        <material name="red"/>
+      </collision> -->
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <xacro:ur5_leader id="1"/>
+
+  <xacro:property name="systems" value="${['papras_6dof', 'gripper']}"/> <!--I'm lazy-->
+  <xacro:property name="system_prefix" value="${['robot1','robot1']}"/>
+  <xacro:property name="arm_ids" value="${[1,1]}"/>
+  <xacro:property name="usb_port" value="/dev/ttyUSB0"/>
+  <xacro:property name="baud_rate" value="1000000"/>
+  <xacro:property name="yaml_file" value="$(find teleop_leaders)/config/single_ur5_leader.yaml"/>
+
+  <xacro:papras_leaders_ros2_control_hw systems="${systems}" system_prefix="${system_prefix}" arm_ids= "${arm_ids}" usb_port_location='${usb_port}' baud_rate_val="${baud_rate}" yaml_file="${yaml_file}"/>
+
+</robot>

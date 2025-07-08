@@ -1,0 +1,29 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/obin/ws_public/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/obin/ws_public/src/champ/champ/include/**",
+        "/home/obin/ws_public/src/champ/champ_base/include/**",
+        "/home/obin/ws_public/src/champ/champ_config/include/**",
+        "/home/obin/ws_public/src/PAPRLE_hw/teleop_leaders/include/**",
+        "/home/obin/ws_public/src/PAPRAS-V0-Public/moveit_servo/include/**",
+        "/home/obin/ws_public/src/PAPRAS-V0-Public/papras_controls/include/**",
+        "/home/obin/ws_public/src/PAPRLE_hw/papras_playgound/papras-orthrus/spot_ros/spot_simulated_walking_controller/include/**",
+        "/home/obin/ws_public/src/yocs_velocity_smoother/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

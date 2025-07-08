@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: papras_table
+    relative_path: description/urdf/teleop_table_7dof.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/teleop_table.srdf
+  CONFIG:
+    author_name: obinkwon
+    author_email: obinkwon@illinois.edu
+    generated_timestamp: 1736011752

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot name="teleop_table" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Import PAPRAS Macros -->
+  <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+  
+ <link name="world"/>
+
+  <joint name="world_env_fixed" type="fixed">
+    <parent link="world"/>
+    <child link="env"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="env">
+    <inertial>
+      <origin xyz="-0.00217818989969598 0.0115130557907703 4.82152969644036E-05" rpy="0 0 0" />
+      <mass value="24.3199996241188" />
+      <inertia ixx="2.59730961995013" ixy="1.29430820761003E-05" ixz="9.65770339797831E-10" iyy="3.22235223758385" iyz="-6.72646520780374E-05" izz="0.632617930010872" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://papras_table/description/meshes/table.stl" />
+      </geometry>
+      <material name="">
+        <color rgba="0.501960784313725 0.501960784313725 0.501960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://papras_table/description/meshes/table.stl" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="robot3/env_joint" type="fixed">
+    <origin xyz="-0.2599 0.50565 -0.0518900000000005" rpy="0 0 0" />
+    <parent link="env" />
+    <child link="robot3/link1" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <joint name="robot4/env_joint" type="fixed">
+    <origin xyz="-0.2599 -0.50535 -0.0518900000000004" rpy="0 0 0" />
+    <parent link="env" />
+    <child link="robot4/link1" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+
+
+  <xacro:papras_arm_7dof id="3"/>
+  <xacro:rh_p12_rn_gripper id="3"/>
+  <xacro:papras_camera_rh12 id="3"/> 
+
+  <xacro:papras_arm_7dof id="4"/>
+  <xacro:rh_p12_rn_gripper id="4"/>
+  <xacro:papras_camera_rh12 id="4"/>
+</robot>

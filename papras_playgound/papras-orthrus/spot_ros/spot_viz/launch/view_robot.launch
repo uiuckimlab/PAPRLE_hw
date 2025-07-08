@@ -1,0 +1,5 @@
+<launch>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find spot_viz)/rviz/robot.rviz" />
+
+  <node name="spot_button_node" pkg="papras_demo" type="spot_eoh.py" respawn="true" output="screen" />
+</launch>

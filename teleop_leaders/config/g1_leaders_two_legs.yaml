@@ -1,0 +1,51 @@
+right_hip_pitch_joint:
+  ID: 15
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+right_hip_roll_joint:
+  ID: 16
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+right_hip_yaw_joint:
+  ID: 17
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+right_knee_joint:
+  ID: 18
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+
+left_hip_pitch_joint:
+  ID: 19
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+left_hip_roll_joint:
+  ID: 20
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+left_hip_yaw_joint:
+  ID: 21
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+left_knee_joint:
+  ID: 22
+  Return_Delay_Time: 1
+  Homing_Offset: 2048
+  Operating_Mode: 0
+  Torque_Enable: 0
+
+

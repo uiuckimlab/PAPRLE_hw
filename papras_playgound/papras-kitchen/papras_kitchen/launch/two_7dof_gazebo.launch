@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="sim" default="false"/>
+  <arg name="pipeline" default="ompl"/>
+  <arg name="rviz" default="true"/>
+
+  <!-- Gazebo args -->
+  <arg name="paused" default="false"/>
+  <arg name="gazebo_gui" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="verbose" value="false" />
+
+  <!-- Model spawn locations -->
+  <arg name="robot_pos_x" default="0"/>
+  <arg name="robot_pos_y" default="0"/>
+  <arg name="robot_pos_z" default="0.2"/>
+  <arg name="robot_pos_yaw" default="0"/>
+
+  <!-- startup Gazebo related -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find papras_description)/worlds/papras_system.world"/>
+    <arg name="gui" value="$(arg gazebo_gui)"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="verbose" value="$(arg verbose)"/>
+  </include>
+
+  <!-- startup robot_description related -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find papras_kitchen)/description/urdf/papras_kitchen_2_7dof_arms.urdf.xacro'"/>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model papras_kitchen -x $(arg robot_pos_x) -y $(arg robot_pos_y) -z $(arg robot_pos_z) -Y $(arg robot_pos_yaw) -param robot_description"/>
+  
+  <!-- startup ROS control related -->
+  <include file="$(find papras_controls)/launch/controller_utils.launch"/>
+  <rosparam file="$(find papras_controls)/config/joint_trajectory_controller_7dof_gazebo.yaml" command="load"/>
+  <node name="sim_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn arm1_controller arm2_controller gripper1_controller gripper2_controller"/>
+
+
+ <!-- startup move_group related -->
+  <!-- <include file="$(find kitchen_moveit_dual_arm_config)/launch/move_group.launch"> -->
+  <include file="$(find kitchen_two_7dof_arms_moveit_config)/launch/move_group.launch">
+    <arg name="pipeline" value="$(arg pipeline)"/>
+    <arg name="load_robot_description" value="true" />
+  </include>
+
+    <!-- startup rviz visulization -->
+  <group if="$(arg rviz)">
+    <include file="$(find kitchen_two_7dof_arms_moveit_config)/launch/moveit_rviz.launch">
+      <arg name="rviz_config" value="$(find kitchen_two_7dof_arms_moveit_config)/launch/moveit.rviz"/>
+    </include>
+  </group>
+
+</launch>

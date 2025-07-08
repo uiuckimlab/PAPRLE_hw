@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="usb_port" default="/dev/ttyUSB0" />
+  <arg name="baud_rate" default="1000000" />
+  <arg name="yaml_file" default="$(find papras_kitchen)/config/hardware_dual.yaml"/>
+
+  <arg name="pipeline" default="ompl"/>
+  <arg name="rviz" default="true"/>
+
+ <!-- startup robot_description related -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find papras_kitchen)/description/urdf/papras_kitchen_2_7dof_arms.urdf.xacro'"/>
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen"/>
+ 
+
+  <node pkg="papras_controls" type="papras_control_node" name="papras_control_node" output="screen">
+    <param name="usb_port" value="$(arg usb_port)"/>
+    <param name="baud_rate" value="$(arg baud_rate)"/>    
+    <param name="yaml_file" value="$(arg yaml_file)"/>
+  </node>
+
+  <!-- startup ROS control related -->
+  <include file="$(find papras_controls)/launch/controller_utils.launch"/>
+  <rosparam file="$(find papras_controls)/config/joint_trajectory_controller_7dof_gazebo.yaml" command="load"/>
+  <node name="hw_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn arm1_controller arm2_controller gripper1_controller gripper2_controller"/>
+
+
+  <!-- startup move_group related -->
+  <include file="$(find kitchen_two_7dof_arms_moveit_config)/launch/move_group.launch">
+    <arg name="pipeline" value="$(arg pipeline)"/>
+    <arg name="load_robot_description" value="true" />
+  </include>
+
+    <!-- startup rviz visulization -->
+  <group if="$(arg rviz)">
+    <include file="$(find kitchen_two_7dof_arms_moveit_config)/launch/moveit_rviz.launch">
+      <arg name="rviz_config" value="$(find kitchen_two_7dof_arms_moveit_config)/launch/moveit.rviz"/>
+    </include>
+  </group>
+
+</launch>

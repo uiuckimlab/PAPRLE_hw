@@ -1,0 +1,55 @@
+   Waypoint name: waypoint_0 id: spayed-worm-szGuqhMDnIQJNcyX7l72Mw== short code:   
+   Waypoint name: waypoint_1 id: foxy-gadfly-HALNM9i+PkeOiJl4PsL5XQ== short code: fg
+   Waypoint name: waypoint_2 id: blonde-agouti-h7DvCmrEkiehchznQT.EzQ== short code: ba
+   Waypoint name: waypoint_3 id: fumed-boxer-MqLoo1NedB9zu5vIM6Uwjw== short code: fb
+   Waypoint name: default id: razed-horse-PnoBLk7Rl.VWTJliD2SnoQ== short code: rh
+   Waypoint name: waypoint_5 id: botchy-hyrax-PBn1D2vApzSYrRkUwnx2iA== short code: bh
+   Waypoint name: waypoint_6 id: stated-duck-TWjCXJVMOXnMVPrO4flI3Q== short code: sd
+   Waypoint name: waypoint_7 id: missed-coyote-GbM3SEqsqXq9SfabtA5RYQ== short code: mc
+   Waypoint name: waypoint_8 id: chirpy-puppy-NNCXUhtF1z5Exv9zndvDLQ== short code: cp
+   Waypoint name: waypoint_9 id: seven-cur-qjTG5XRDMf1yVyVSaNmXBQ== short code: sc
+   Waypoint name: waypoint_10 id: molten-dragon-IUDWthjqZ357LrMqJ76LAA== short code: md
+   Waypoint name: waypoint_11 id: acold-wolf-bqDGXxgnf.EmLGWvpzf8jw== short code: aw
+   Waypoint name: waypoint_12 id: acned-biped-XxQkz14Dd+dfRO.0BHeKRQ== short code: ab
+   Waypoint name: waypoint_13 id: curled-snake-rsW7m6ehohLRa5ruUZ6kLQ== short code: cs
+   Waypoint name: waypoint_14 id: sedgy-foal-IoYUjLUsqqeo2E5f81c4+Q== short code: sf
+   Waypoint name: waypoint_15 id: chafed-kodiak-xZ1FXSpQhC1GHykinjuCfA== short code: ck
+   Waypoint name: default id: amiss-locust-FN9iWFSEbcsdELrJYt5xyg== short code: al
+   Waypoint name: waypoint_17 id: rhymed-snail-LU4tYeEuUI1HLFmUvobzOA== short code:   
+   Waypoint name: waypoint_18 id: azoic-setter-Ib0VCj5GO2oCzMIMighD3g== short code: as
+   Waypoint name: waypoint_19 id: felted-wasp-K22k88G43XOm9tFblLIZiw== short code: fw
+   Waypoint name: waypoint_20 id: stocky-kiwi-FI.d.nixfE7NXIgViTrAwA== short code: sk
+   Waypoint name: waypoint_21 id: uppish-emu-y7craTdPIWJY1tESSxW3Cw== short code: ue
+   Waypoint name: waypoint_22 id: stilly-wrasse-xsYAorQy03Xm2CIFL2rx.w== short code:   
+   Waypoint name: waypoint_23 id: caring-chunga-VeKT2+eFCt80yzoUR6ZFlg== short code: cc
+   Waypoint name: waypoint_24 id: repand-sloth-HNHIHw+OkfneKP3FddVthQ== short code:   
+   Waypoint name: waypoint_25 id: world-macaw-VWLIDFUd2dLSy5qysHrLPA== short code: wm
+   Waypoint name: waypoint_26 id: visual-kodiak-XEoBWQAeYxrWlEbkjKmImw== short code: vk
+-> Waypoint name: default id: fifty-oxtail-zJK6qI4SPwjqMaoOcfJiCA== short code: fo
+(Edge) from waypoint acned-biped-XxQkz14Dd+dfRO.0BHeKRQ== to waypoint curled-snake-rsW7m6ehohLRa5ruUZ6kLQ== (cost 0.3284746266092894)
+(Edge) from waypoint acold-wolf-bqDGXxgnf.EmLGWvpzf8jw== to waypoint acned-biped-XxQkz14Dd+dfRO.0BHeKRQ== (cost 0.28376471501598277)
+(Edge) from waypoint amiss-locust-FN9iWFSEbcsdELrJYt5xyg== to waypoint rhymed-snail-LU4tYeEuUI1HLFmUvobzOA== (cost 0.027161900594572432)
+(Edge) from waypoint azoic-setter-Ib0VCj5GO2oCzMIMighD3g== to waypoint felted-wasp-K22k88G43XOm9tFblLIZiw== (cost 0.3314103739427391)
+(Edge) from waypoint blonde-agouti-h7DvCmrEkiehchznQT.EzQ== to waypoint fumed-boxer-MqLoo1NedB9zu5vIM6Uwjw== (cost 0.11530908287508582)
+(Edge) from waypoint botchy-hyrax-PBn1D2vApzSYrRkUwnx2iA== to waypoint stated-duck-TWjCXJVMOXnMVPrO4flI3Q== (cost 0.7421577937743736)
+(Edge) from waypoint caring-chunga-VeKT2+eFCt80yzoUR6ZFlg== to waypoint repand-sloth-HNHIHw+OkfneKP3FddVthQ== (cost 0.3185601234811814)
+(Edge) from waypoint chafed-kodiak-xZ1FXSpQhC1GHykinjuCfA== to waypoint amiss-locust-FN9iWFSEbcsdELrJYt5xyg== (cost 0.18391046466653121)
+(Edge) from waypoint chirpy-puppy-NNCXUhtF1z5Exv9zndvDLQ== to waypoint seven-cur-qjTG5XRDMf1yVyVSaNmXBQ== (cost 2.0553010596930634)
+(Edge) from waypoint curled-snake-rsW7m6ehohLRa5ruUZ6kLQ== to waypoint sedgy-foal-IoYUjLUsqqeo2E5f81c4+Q== (cost 0.2986785760187429)
+(Edge) from waypoint felted-wasp-K22k88G43XOm9tFblLIZiw== to waypoint stocky-kiwi-FI.d.nixfE7NXIgViTrAwA== (cost 2.0210589578389007)
+(Edge) from waypoint foxy-gadfly-HALNM9i+PkeOiJl4PsL5XQ== to waypoint blonde-agouti-h7DvCmrEkiehchznQT.EzQ== (cost 0.3565048694318647)
+(Edge) from waypoint fumed-boxer-MqLoo1NedB9zu5vIM6Uwjw== to waypoint razed-horse-PnoBLk7Rl.VWTJliD2SnoQ== (cost 0.2848455611907287)
+(Edge) from waypoint missed-coyote-GbM3SEqsqXq9SfabtA5RYQ== to waypoint chirpy-puppy-NNCXUhtF1z5Exv9zndvDLQ== (cost 2.033539528415518)
+(Edge) from waypoint molten-dragon-IUDWthjqZ357LrMqJ76LAA== to waypoint acold-wolf-bqDGXxgnf.EmLGWvpzf8jw== (cost 0.4582387915427583)
+(Edge) from waypoint razed-horse-PnoBLk7Rl.VWTJliD2SnoQ== to waypoint botchy-hyrax-PBn1D2vApzSYrRkUwnx2iA== (cost 0.030248183442986888)
+(Edge) from waypoint repand-sloth-HNHIHw+OkfneKP3FddVthQ== to waypoint world-macaw-VWLIDFUd2dLSy5qysHrLPA== (cost 0.7442860913965746)
+(Edge) from waypoint rhymed-snail-LU4tYeEuUI1HLFmUvobzOA== to waypoint azoic-setter-Ib0VCj5GO2oCzMIMighD3g== (cost 1.9690774028289308)
+(Edge) from waypoint sedgy-foal-IoYUjLUsqqeo2E5f81c4+Q== to waypoint chafed-kodiak-xZ1FXSpQhC1GHykinjuCfA== (cost 0.2549531793441489)
+(Edge) from waypoint seven-cur-qjTG5XRDMf1yVyVSaNmXBQ== to waypoint molten-dragon-IUDWthjqZ357LrMqJ76LAA== (cost 2.018441954293864)
+(Edge) from waypoint spayed-worm-szGuqhMDnIQJNcyX7l72Mw== to waypoint foxy-gadfly-HALNM9i+PkeOiJl4PsL5XQ== (cost 0.22610111466604016)
+(Edge) from waypoint stated-duck-TWjCXJVMOXnMVPrO4flI3Q== to waypoint missed-coyote-GbM3SEqsqXq9SfabtA5RYQ== (cost 0.3443924668878457)
+(Edge) from waypoint stilly-wrasse-xsYAorQy03Xm2CIFL2rx.w== to waypoint caring-chunga-VeKT2+eFCt80yzoUR6ZFlg== (cost 0.9167534386490701)
+(Edge) from waypoint stocky-kiwi-FI.d.nixfE7NXIgViTrAwA== to waypoint uppish-emu-y7craTdPIWJY1tESSxW3Cw== (cost 1.4043473859858824)
+(Edge) from waypoint uppish-emu-y7craTdPIWJY1tESSxW3Cw== to waypoint stilly-wrasse-xsYAorQy03Xm2CIFL2rx.w== (cost 2.0699479482331733)
+(Edge) from waypoint visual-kodiak-XEoBWQAeYxrWlEbkjKmImw== to waypoint fifty-oxtail-zJK6qI4SPwjqMaoOcfJiCA== (cost 0.3091784380292498)
+(Edge) from waypoint world-macaw-VWLIDFUd2dLSy5qysHrLPA== to waypoint visual-kodiak-XEoBWQAeYxrWlEbkjKmImw== (cost 1.2778973541574132)

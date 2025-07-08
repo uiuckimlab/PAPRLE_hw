@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="papras_leaders" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<!-- Import PAPRAS Macros -->
+  <xacro:include filename="$(find papras_description)/urdf/papras_macros.xacro"/>
+  <xacro:include filename="$(find teleop_leaders)/description/urdf/leader_macros.xacro"/>
+  <xacro:include filename="$(find teleop_leaders)/description/urdf/leader_macros.ros2_control.xacro"/>
+  <link name="world"/>
+
+  <joint name="robot1/world_joint" type="fixed">
+    <origin xyz="0.2599 0.33455 -0.05189" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="robot1/base_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <xacro:papras7dof_leader id="1"/>
+
+  <xacro:property name="systems" value="${['g1_leg', 'g1_leg']}"/>
+  <xacro:property name="system_prefix" value="${['', '']}"/>
+  <xacro:property name="joint_names" value="${[['right_hip_pitch_joint', 'right_hip_roll_joint', 'right_hip_yaw_joint', 'right_knee_joint'],['left_hip_pitch_joint', 'left_hip_roll_joint', 'left_hip_yaw_joint', 'left_knee_joint']]}"/>
+  <xacro:property name="arm_ids" value="${[1,2]}"/>
+  <xacro:property name="usb_port" value="/dev/ttyUSB0"/>
+  <xacro:property name="baud_rate" value="1000000"/>
+  <xacro:property name="yaml_file" value="$(find teleop_leaders)/config/g1_leaders_two_legs.yaml"/>
+
+  <xacro:papras_leaders_ros2_control_hw systems="${systems}" system_prefix="${system_prefix}" arm_ids= "${arm_ids}" usb_port_location='${usb_port}' baud_rate_val="${baud_rate}" yaml_file="${yaml_file}" joint_names="${joint_names}"/>
+
+</robot>

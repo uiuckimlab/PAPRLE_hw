@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package format="3">
+  <name>teleop_msgs</name>
+  <version>1.0.1</version>
+  <description>
+    Package for PAPRAS leader follower teleoperation table
+  </description>
+  <license>Apache 2.0</license>
+  <author email="obin.kwon000@gmail.com">Obin Kwon</author>
+  <author email="sankalp.yamsani@gmail.com">Sankalp Yamsani</author>
+  <maintainer email="obin.kwon000@gmail.com">Obin Kwon</maintainer>
+  <maintainer email="sankalp.yamsani@gmail.com">Sankalp Yamsani</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>action_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+</package>

@@ -1,0 +1,3 @@
+Fiducial 1 (Table): Waypoint name: default id: bowing-botfly-+3pJbPd8ZTDAWwJiz.QyYA== short code: bb
+Fiducial 2 (Kitchen): Waypoint name: default id: proto-botfly-.LeMhE0.wncUy3j3SwwEig== short code: pb
+Rest with F1 in view: Waypoint name: waypoint_3 id: bowlegged-skunk-BLd2ZAursyAOc3HBotE+oQ== short code: bs
